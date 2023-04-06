@@ -1,7 +1,6 @@
 'use client';
 
 import LeftMenu, { Contents } from "#/components/LeftMenu";
-import { VerifiedBotIcon } from "#/icons/discord-badges";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode, }) {
 

@@ -5,8 +5,11 @@ const DISCORD_CDN = 'https://cdn.discordapp.com'
 
 export function discordOauthUrlGenerator(currentPage = '/discord') {
     const clientId = '1040416004272050256'
-    // const currentUrl = 'http://localhost:3000'
-    const currentUrl = 'https://tools-dev-tunnel.riskymh.dev'
+    let currentUrl = 'http://localhost:3000'
+    // const currentUrl = 'https://tools-dev-tunnel.riskymh.dev'
+    if (process.env.VERCEL_ENV === 'production') currentUrl = 'https://tools.riskymh.dev'
+    else if (process.env.VERCEL_ENV === 'preview' && process.env.VERCEL_URL) currentUrl = process.env.VERCEL_URL
+    
     const redirectUri = `${currentUrl}/discord/auth`
     const scopes = 'identify guilds'
 

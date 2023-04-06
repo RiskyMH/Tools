@@ -7,9 +7,9 @@ export function discordOauthUrlGenerator(currentPage = '/discord') {
     const clientId = '1040416004272050256'
     let currentUrl = 'http://localhost:3000'
     // const currentUrl = 'https://tools-dev-tunnel.riskymh.dev'
-    if (process.env.VERCEL_ENV === 'production') currentUrl = 'https://tools.riskymh.dev'
-    else if (process.env.VERCEL_ENV === 'preview' && process.env.VERCEL_URL) currentUrl = process.env.VERCEL_URL
-    
+    if (process.env.NEXT_PUBLIC_VERCEL_ENV === 'production') currentUrl = 'https://tools.riskymh.dev'
+    else if (process.env.NEXT_PUBLIC_VERCEL_ENV === 'preview' && process.env.NEXT_PUBLIC_VERCEL_ENV) currentUrl = process.env.NEXT_PUBLIC_VERCEL_ENV
+
     const redirectUri = `${currentUrl}/discord/auth`
     const scopes = 'identify guilds'
 

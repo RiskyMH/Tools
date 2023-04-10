@@ -1,5 +1,5 @@
 'use client'
-import Loading, { UserInfoLoading } from "./loading";
+import { UserInfoLoading } from "./loading";
 import Section from "#/components/Section";
 import ShowData from "#/components/ShowData";
 import { UnauthorizedError } from "#/components/Errors";

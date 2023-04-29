@@ -1,8 +1,8 @@
 'use client'
 
 import Section from "#/components/Section"
-import { GuildInfoSkeleton } from "./GuildInfo"
-import { GuildInfoCardSkeleton } from "./GuildInfoCard"
+import { GuildInfoSkeleton } from "./@guildInput/page"
+import { GuildInfoCardSkeleton } from "./@guilds/GuildInfoCard"
 
 export default function Loading() {
     return (

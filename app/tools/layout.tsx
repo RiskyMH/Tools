@@ -1,6 +1,4 @@
-'use client';
-
-import LeftMenu, { Contents } from "#/components/LeftMenu";
+import LeftMenu, { Contents } from "#/components/LeftMenu.client";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode, }) {
 

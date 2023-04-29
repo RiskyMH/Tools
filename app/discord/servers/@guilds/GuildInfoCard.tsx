@@ -1,3 +1,5 @@
+'use client';
+
 import ReadOnlyPermissionsTable from "#/components/ReadOnlyPermissions";
 import Tooltip from "#/components/Tooltip";
 import { ServerOwnerIcon, ServerPartneredIcon, ServerVerifiedIcon, StaffIcon } from "#/icons/discord-badges";

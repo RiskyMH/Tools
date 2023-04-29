@@ -1,5 +1,5 @@
-import getUser from "#/requests/getUser";
-import { APIUser } from "discord-api-types/v10";
+'use client';
+
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -50,7 +50,7 @@ export default function Navbar({ mobileMenu }: { mobileMenu?: { mobileMenuOpen: 
                     <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start text-white">
                         <div className="flex-shrink-0 flex items-center font-bold select-none">
                             {/* <img className="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow" /> */}
-                            <img className="block text-2xl h-8 w-8"  src="/hammer_and_wrench_color.svg" alt="🛠️" />
+                            <img className="block text-2xl h-8 w-8" src="/hammer_and_wrench_color.svg" alt="🛠️" />
                             <p className="text-xl ml-3 tracking-wide">Tools</p>
                             {/* <img className="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow" /> */}
                         </div>

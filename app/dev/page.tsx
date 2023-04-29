@@ -1,13 +1,8 @@
-'use client'
-
 import Section from "#/components/Section"
 import Link from "next/link"
-import { PropsWithChildren, useEffect } from "react"
+import { PropsWithChildren } from "react"
 
 export default function Loading() {
-    useEffect(() => {
-        document.title = "Discord Tools"
-    })
     return (
         <>
             <UpdatedSection title="General">

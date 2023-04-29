@@ -1,7 +1,6 @@
-'use client'
-
 import Image from 'next/image'
 import styles from './page.module.css'
+import { Metadata } from 'next'
 
 export default function Home() {
   return (
@@ -56,4 +55,10 @@ export default function Home() {
       </footer>
     </div>
   )
+}
+
+
+export const metadata: Metadata = {
+  title: 'Tools | Many useful tools for your needs!',
+  description: 'This has some tools that can be helpful with Discord and other needs.',
 }

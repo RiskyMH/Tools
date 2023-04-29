@@ -1,5 +1,4 @@
-'use client'
-import { UnauthorizedError } from "#/components/Errors";
+import { UnauthorizedError } from "#/components/Errors.client";
 import Section from "#/components/Section";
 import Tooltip from "#/components/Tooltip";
 import {

@@ -1,6 +1,5 @@
-'use client';
-
 import Section from "#/components/Section";
+import type { Metadata } from "next";
 
 export default function Tools() {
     return (
@@ -21,4 +20,10 @@ export default function Tools() {
 
         </>
     )
+}
+
+
+export const metadata: Metadata = {
+    title: 'Snowflake',
+    description: 'Tools around snowflakes [todo]',
 }

@@ -1,5 +1,5 @@
-'use client'
 import Section from "#/components/Section";
+import type { Metadata } from "next";
 
 export default function Tools() {
 
@@ -18,6 +18,11 @@ export default function Tools() {
             </ol>
         </Section>
     )
+}
+
+export const metadata: Metadata = {
+    title: 'Other Useful Websites',
+    description: 'Some useful websites for Discord bots and more',
 }
 
 function Link({ url, title, extra }: { url: string, title: string, extra?: string }) {

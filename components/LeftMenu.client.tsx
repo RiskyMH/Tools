@@ -1,3 +1,5 @@
+'use client';
+
 import Close from "#/icons/Close";
 import Hamburger from "#/icons/Hamburger";
 import Link from "next/link";

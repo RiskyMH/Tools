@@ -1,3 +1,5 @@
+'use client';
+
 import { discordOauthUrlGenerator } from "#/util";
 import { usePathname } from "next/navigation";
 import { PropsWithChildren } from "react";

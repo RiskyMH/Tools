@@ -1,9 +1,7 @@
-'use client'
-
 import './globals.css'
 
-import Navbar from '#/components/Navbar'
-import { usePathname } from 'next/navigation'
+import Navbar from '#/components/Navbar.client'
+import type { Metadata } from 'next'
 
 export default function RootLayout({
   children,
@@ -11,7 +9,6 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
-  const pathname = usePathname()
   return (
     <html lang="en">
       {/*
@@ -27,3 +24,14 @@ export default function RootLayout({
   )
 }
 
+export const metadata: Metadata = {
+  icons: {
+    icon: '/favicon.png',
+  },
+  
+  title: {
+    default: 'Tools',
+    template: '%s | Tools',
+  },
+  description: 'Some random things that you can use!',
+}

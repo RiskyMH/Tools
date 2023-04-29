@@ -1,13 +1,8 @@
-'use client'
-
 import Section from "#/components/Section"
 import Link from "next/link"
-import { PropsWithChildren, useEffect } from "react"
+import type { PropsWithChildren } from "react"
 
 export default function Loading() {
-    useEffect(() => {
-        document.title = "Discord Tools"
-    })
     return (
         <>
             <UpdatedSection title="General Tools">
@@ -22,6 +17,12 @@ export default function Loading() {
             </UpdatedSection>
         </>
     )
+}
+
+export const metadata = {
+    title: {
+        absolute: "Discord Tools"
+    }
 }
 
 function UpdatedSection({ title, children }: PropsWithChildren<{ title: string }>) {

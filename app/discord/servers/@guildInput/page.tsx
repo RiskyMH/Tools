@@ -1,3 +1,5 @@
+'use client';
+
 // This is for guild info
 // It allows for an invite or guild id to be passed in
 // It will fetch the guild info and display it
@@ -8,6 +10,7 @@
 // - if guild id, uses instant invite for invite api
 // But they might have both or none...
 
+import Section from "#/components/Section"
 import useGuildWidget from "#/requests/getGuildWidget"
 import useInvite from "#/requests/getInvite"
 import { defaultAvatar, guildIcon } from "#/util"
@@ -92,7 +95,7 @@ export default function GuildInfo() {
     const [currentInput, setCurrentInput] = useState('')
 
     return (
-        <>
+        <Section title="Server Info">
             <form className="flex flex-col" onSubmit={setInput}>
                 <label htmlFor="invite-or-id" className="text-gray-700 dark:text-gray-400">Invite URL or Guild ID</label>
                 <input type="text" id="invite-or-id" name="invite-or-id" className="border border-gray-300 rounded-md p-2" onChange={(a) => setCurrentInput(a.target.value)} />
@@ -195,7 +198,7 @@ export default function GuildInfo() {
             )
 
             }
-        </>
+        </Section>
     )
 }
 

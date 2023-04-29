@@ -1,7 +1,5 @@
-'use client';
-
-import LeftMenu, { Contents } from "#/components/LeftMenu";
-import { VerifiedBotIcon } from "#/icons/discord-badges";
+import LeftMenu, { Contents } from "#/components/LeftMenu.client";
+import type { Metadata } from "next";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode, }) {
 
@@ -20,6 +18,16 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   );
 }
 
+export const metadata: Metadata = {
+  title: {
+    default: "Developing Tools",
+    template: "%s | Tools",
+  },
+  description: "Not really tolls, just some stuff with testing the website",
+  robots: {
+    index: false
+  }
+}
 
 const ContentsForMenu: Contents[] = [
   {

@@ -161,8 +161,8 @@ const generalPermissions = [
         description: 'Allows members to change the nicknames of other members.'
     },
     {
-        name: 'Manage Emojis and Stickers',
-        bitfield: PermissionFlagsBits.ManageEmojisAndStickers,
+        name: 'Manage Expressions',
+        bitfield: PermissionFlagsBits.ManageGuildExpressions,
         description: 'Allows members to add or remove custom emoji and stickers in this server.'
     },
     {
@@ -190,10 +190,10 @@ const generalPermissions = [
         bitfield: PermissionFlagsBits.ViewGuildInsights,
         description: 'Allows members to view Server Insights, which shows data on community growth, engagement, and more.'
     },
-    // {
-    //     name: 'View Creator Monetization Insights',
-    //     bitfield: PermissionFlagsBits,
-    // }
+    {
+        name: 'View Creator Monetization Insights?',
+        bitfield: PermissionFlagsBits.ViewCreatorMonetizationAnalytics,
+    }
 
 ]
 
@@ -273,6 +273,11 @@ const textPermissions: PermissionList[] = [
         bitfield: PermissionFlagsBits.UseApplicationCommands,
         description: 'Allows members to use commands from applications, including slash commands and context menu commands.'
     },
+    {
+        name: 'Send Voice Messages',
+        bitfield: PermissionFlagsBits.SendVoiceMessages,
+        description: 'Allows members to send voice messages.'
+    },
 
 ]
 
@@ -326,7 +331,17 @@ const voicePermissions: PermissionList[] = [
         name: 'Use Embedded Activities',
         bitfield: PermissionFlagsBits.UseEmbeddedActivities,
         description: 'Allows members to use Activities in this server.'
-    }
+    },
+    {
+        name: 'Use Soundboard',
+        bitfield: PermissionFlagsBits.UseSoundboard,
+        description: 'Allows members to send from a server soundboard.'
+    },
+    {
+        name: 'Use External Sounds',
+        bitfield: PermissionFlagsBits.UseExternalSounds,
+        description: 'Allows members to sounds from other servers, if the\'re a Discord Nitro member.'
+    },
 ]
 
 const otherPermissions: PermissionList[] = []

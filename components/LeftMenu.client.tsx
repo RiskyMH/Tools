@@ -83,6 +83,7 @@ export default function LeftMenu({ contents, ...props }: { contents: Contents[] 
                             <div className="space-y-1">
                                 {content.subcategory.map((subcategory) => (
                                     <Link
+                                        prefetch={false}
                                         key={subcategory.name}
                                         href={subcategory.link}
                                         onClick={() => pathname?.startsWith(subcategory.link) && close()}

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     default: "Developing Tools",
     template: "%s | Tools",
   },
-  description: "Not really tolls, just some stuff with testing the website",
+  description: "Not really tools, just some stuff with testing the website",
   robots: {
     index: false
   }

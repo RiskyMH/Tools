@@ -4,6 +4,15 @@ const nextConfig = {
     appDir: true,
     // typedRoutes: true,
   },
+  redirects: async () => {
+    return [
+      {
+        source: '/discord/permissions',
+        destination: '/discord/bitfield',
+        permanent: true,
+      },
+    ];
+  }
   
   
 };

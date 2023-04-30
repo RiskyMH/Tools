@@ -142,7 +142,7 @@ export default function GuildInfo() {
                             }
                             {(invite?.code || widget?.instant_invite) &&
                                 <div className="flex flex-col ml-4">
-                                    <p className="text-gray-500 dark:text-gray-400">{invite?.code === invite?.guild?.vanity_url_code ? "Vanity Invite" : "Invite"}</p>
+                                    <p className="text-gray-500 dark:text-gray-400">{(invite?.code && invite.code === invite?.guild?.vanity_url_code) ? "Vanity Invite" : "Invite"}</p>
                                     <a className="text-blue-500 hover:underline" href={`https://${inviteUrl()}`} target='_blank'>{inviteUrl()}</a>
                                 </div>
                             }

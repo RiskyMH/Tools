@@ -2,7 +2,6 @@
 
 import useUser, { getUser } from "#/requests/getUser";
 import { discordOauthUrlGenerator } from "#/util";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { useSWRConfig } from "swr";
@@ -51,10 +50,10 @@ export default function Tools() {
                     {!isLoggedOut && <p className="text-green-500">success</p>}
                     <p>Logged in as {user.username}#{user.discriminator}</p>
                     <div>
-                        <Link onClick={logout} className="text-blue-500 hover:underline" href='#' > logout</Link>
+                        <a onClick={logout} className="text-blue-500 hover:underline" href='#' > logout</a>
                     </div>
                     <div>
-                        <Link className="text-blue-500 hover:underline" href={discordOauthUrlGenerator('/discord')} >Re-login to Discord</Link>
+                        <a className="text-blue-500 hover:underline" href={discordOauthUrlGenerator('/discord')} >Re-login to Discord</a>
                     </div>
                 </>
             ) : (

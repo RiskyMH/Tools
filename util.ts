@@ -3,7 +3,7 @@ import { APIApplication, APIGuild, APIInviteGuild, APIUser } from "discord-api-t
 const DISCORD_CDN = 'https://cdn.discordapp.com'
 
 
-export function discordOauthUrlGenerator(currentPage = '/discord') {
+export function discordOauthUrlGenerator(currentPage = '/discord'): string {
     const clientId = '1040416004272050256'
     let currentUrl = 'http://localhost:3000'
     // const currentUrl = 'https://tools-dev-tunnel.riskymh.dev'

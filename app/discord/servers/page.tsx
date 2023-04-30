@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export default function Servers() {
-    return 
+    return
 }
 
 

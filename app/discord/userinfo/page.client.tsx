@@ -1,5 +1,5 @@
 'use client'
-import { UserInfoLoading } from "./loading";
+
 import Section from "#/components/Section";
 import ShowData from "#/components/ShowData";
 import { UnauthorizedError } from "#/components/Errors.client";
@@ -34,7 +34,7 @@ export default function UserInfo() {
                 ) : (
                     isError
                         ? <p>Unknown error {isError}</p>
-                        : <UserInfoLoading />
+                        : <p>Loading...</p>
                 )
                 }
             </Section>

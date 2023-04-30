@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from "react";
-import Loading from "./loading";
 import Section from "#/components/Section";
 import { discordOauthUrlGenerator } from "#/util";
 
@@ -24,7 +23,6 @@ export default function DeveloperPage() {
     return (
 
         noToken === true ? (
-
             <Section title="Basic developer tools">
                 Not logged in, token not found. <a className="text-blue-500 hover:underline" href={discordOauthUrlGenerator('/discord/developer')}>Re-login to Discord</a>
             </Section>
@@ -58,7 +56,9 @@ export default function DeveloperPage() {
             </Section>
 
         ) : (
-            <Loading />
+            <Section title="Basic developer tools">
+                <p>Loading...</p>
+            </Section>
 
         )
 

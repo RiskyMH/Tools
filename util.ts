@@ -13,7 +13,7 @@ export function discordOauthUrlGenerator(currentPage = '/discord'): string {
     const redirectUri = `${currentUrl}/discord/auth`
     const scopes = 'identify guilds'
 
-    return `https://discord.com/oauth2/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=token&scope=${scopes}${currentPage && `&state=${encodeURIComponent(currentPage)}`}`
+    return `https://discord.com/oauth2/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=token&scope=${scopes}${currentPage && `&state=${encodeURIComponent(currentPage)}&prompt=none`}`
 
 }
 

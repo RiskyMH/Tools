@@ -1,6 +1,6 @@
 import './globals.css'
 
-import Navbar from '#/components/Navbar.client'
+import Navbar from '#/components/Navbar'
 import type { Metadata } from 'next'
 
 export default function RootLayout({

@@ -4,7 +4,7 @@ import Close from "#/icons/Close";
 import Hamburger from "#/icons/Hamburger";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ComponentProps, ReactComponentElement, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 
 export interface Contents {

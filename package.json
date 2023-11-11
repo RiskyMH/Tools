@@ -10,24 +10,24 @@
     "update": "yarn upgrade-interactive"
   },
   "dependencies": {
-    "discord-api-types": "^0.37.48",
-    "eslint": "^8.44.0",
-    "next": "^13.4.9",
+    "discord-api-types": "^0.37.63",
+    "eslint": "^8.53.0",
+    "next": "^14.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "remove-markdown": "^0.5.0",
-    "swr": "^2.2.0",
-    "typescript": "^5.1.6"
+    "swr": "^2.2.4",
+    "typescript": "^5.2.2"
   },
-  "packageManager": "yarn@3.6.1",
+  "packageManager": "yarn@4.0.1",
   "devDependencies": {
-    "@types/node": "^20.4.2",
-    "@types/react": "^18.2.14",
-    "@types/react-dom": "^18.2.7",
-    "@types/remove-markdown": "^0.3.1",
-    "autoprefixer": "^10.4.14",
-    "eslint-config-next": "^13.4.9",
-    "postcss": "^8.4.25",
-    "tailwindcss": "^3.3.2"
+    "@types/node": "^20.9.0",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@types/remove-markdown": "^0.3.4",
+    "autoprefixer": "^10.4.16",
+    "eslint-config-next": "^14.0.2",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5"
   }
 }

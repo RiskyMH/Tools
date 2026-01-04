@@ -3,12 +3,10 @@ const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 
 export default async function discordRequest(url: string, method = 'GET', token?: string | false, body?: string): Promise<any> {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && token !== false) {
         const newToken = localStorage.getItem("discord_token") || undefined;
         if (newToken) {
             token = newToken;
-        } else if (token !== false) {
-            token = undefined;
         }
     }
 

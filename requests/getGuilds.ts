@@ -4,7 +4,7 @@ import discordRequest from "./discord";
 
 
 export const getGuilds = (async (token?: string): Promise<APIGuild[]> => {
-    return discordRequest("https://discord.com/api/v10/users/@me/guilds", "GET", token)
+    return discordRequest("https://discord.com/api/v10/users/@me/guilds?with_counts=true", "GET", token)
 })
 
 

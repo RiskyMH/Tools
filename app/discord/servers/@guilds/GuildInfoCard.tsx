@@ -51,7 +51,7 @@ export default function GuildInfoCard({ guild }: { guild: APIGuild }) {
                         </Tooltip>
                     )}
                     {!guild.owner && guild.permissions && hasBitFlag(guild.permissions, PermissionFlagsBits.Administrator) && (
-                        <Tooltip title="Moderator">
+                        <Tooltip title="Administrator">
                             <StaffIcon className="w-5 h-5" />
                         </Tooltip>
                     )}
@@ -72,6 +72,17 @@ export default function GuildInfoCard({ guild }: { guild: APIGuild }) {
                 ref={collapseElement}>
                 <div className="border-t-2 p-4 pt-2 border-gray-400 dark:border-gray-700 text-gray-800 dark:text-gray-200">
                     {/* <div> */}
+                    {guild.approximate_member_count && (
+                        // green dot icon
+                        <div className="ml-auto text-gray-500 dark:text-gray-400 text-sm flex items-center gap-1 mb-3">
+                            <span className="w-2 h-2 bg-green-500/80 rounded-full inline-block" />
+                            {(guild.approximate_presence_count ?? 0).toLocaleString()} online
+                            <span />
+                            <span className="w-2 h-2 bg-gray-500/80 rounded-full inline-block" />
+                            {guild.approximate_member_count.toLocaleString()} members
+                        </div>
+                    )}
+                    {/* {guild.vanity_url_code ? <a href={`https://discord.gg/${guild.vanity_url_code}`} target="_blank" rel="noopener noreferrer">{`https://discord.gg/${guild.vanity_url_code}`}</a> : null} */}
                     <h3 className="font-semibold">Your Permissions:</h3>
                     <p className="text-sm text-gray-600 dark:text-gray-300" >
                         Permission bitfield:{' '}
@@ -134,7 +145,7 @@ export default function GuildInfoCard({ guild }: { guild: APIGuild }) {
                     }
                 </div>
             </div>
-        </div>
+        </div >
 
     )
 }

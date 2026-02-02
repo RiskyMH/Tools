@@ -3,15 +3,19 @@ import useSWR from "swr";
 import discordRequest from "./discord";
 
 
-export const getGuilds = (async (token?: string): Promise<APIGuild[]> => {
-    return discordRequest("https://discord.com/api/v10/users/@me/guilds?with_counts=true", "GET", token)
+export const getGuilds = (async (token?: string, with_counts = true, after?: string): Promise<APIGuild[]> => {
+    const res: APIGuild[] = await discordRequest(`https://discord.com/api/v10/users/@me/guilds?with_counts=${with_counts}&${after ? `after=${after}` : ``}`, "GET", token)
+    if (res.length === 200) {
+        return res.concat(await getGuilds(token, with_counts, res[res.length - 1].id));
+    }
+    return res;
 })
 
 
-export default function useGuilds(token?: string) {
+export default function useGuilds(token?: string, with_counts = true) {
 
     // getGuilds(token)   
-    const { data, error, mutate, isValidating } = useSWR(`/discord/guilds`, () => getGuilds(token), {
+    const { data, error, mutate, isValidating } = useSWR(`/discord/guilds`, () => getGuilds(token, with_counts), {
         revalidateOnFocus: true,
         revalidateOnReconnect: true,
         shouldRetryOnError: false,
